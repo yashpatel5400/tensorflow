@@ -569,7 +569,7 @@ class Network(base_layer.Layer):
     for layer in self.layers:
       if layer.name == name:
         return layer
-    raise ValueError('No such layer: ' + name)
+    raise ValueError('No such layer: ' + str(name))
 
   @trackable.no_automatic_dependency_tracking
   def _clear_losses(self):
